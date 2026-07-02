@@ -1,1 +1,1 @@
-# Gamer-Hut-Video-Edit
+# Gamer-Hut-Video-Editor
