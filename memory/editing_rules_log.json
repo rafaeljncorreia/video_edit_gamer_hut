@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "description": "Log de regras de edição aprendidas via feedback do usuário. Cada regra deve ser consultada no início de toda sessão de edição.",
+  "rules": [
+    {
+      "id": "ffmpeg-single-graph-corruption",
+      "date": "2026-07-02",
+      "rule": "Nunca combinar trim + concat + overlay(boxblur) num único filter_complex do ffmpeg neste ambiente. Renderizar cada etapa (capa, trailer composto, áudio) em passes separados com arquivos intermediários e depois concatenar/muxar.",
+      "reason": "Um filtro único combinando esses estágios produzia frames corrompidos (conteúdo da capa vazando para dentro da faixa nítida do trailer) nesta build do ffmpeg (N-125093-gd2d371d10d, 2026-06-18). Reproduzido de forma isolada em src/pipeline/compose.py — ver comentário no topo do arquivo.",
+      "source_feedback": "descoberto durante teste end-to-end do pipeline, não feedback do usuário"
+    }
+  ]
+}

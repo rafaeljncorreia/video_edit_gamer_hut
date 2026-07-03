@@ -1,0 +1,23 @@
+# Mídia (pesada, fica só local)
+media/
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.mp3
+
+# Node / Remotion (Fase 1)
+node_modules/
+dist/
+out/
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
