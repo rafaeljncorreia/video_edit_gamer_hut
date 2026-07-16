@@ -1,13 +1,13 @@
 """Extrai metadados técnicos de arquivos de vídeo/áudio via ffprobe.
 
 Uso:
-    python src/utils/video_info.py media/reference/ --table
+    python src/utils/video_info.py table media/reference/
         -> lista tabular de todos os vídeos no diretório
 
-    python src/utils/video_info.py media/raw/mortal-kombat-1/cover.mp4 --json
+    python src/utils/video_info.py info media/raw/mortal-kombat-1/cover.mp4 --json
         -> JSON completo de streams + formato
 
-    python src/utils/video_info.py media/reference/ --summary
+    python src/utils/video_info.py summary media/reference/
         -> estatísticas agregadas (resolução mais comum, codecs, etc.)
 """
 
