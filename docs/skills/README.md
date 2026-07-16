@@ -13,6 +13,7 @@ Como não há CLI do OpenCode acessível via Bash neste ambiente, o handoff é m
 
 - **openai-whisper** (PyTorch) — transcrição local com timestamp por palavra. Ver [`src/README.md`](../../src/README.md). Usado no lugar de `faster-whisper` porque a dependência PyAV do faster-whisper é bloqueada por política de Controle de Aplicativo do Windows nesta máquina.
 - **FFmpeg** (CLI local, via `subprocess`) — todo o corte, composição (fundo desfocado + centro nítido), mixagem de áudio e queima de legenda `.ass` (karaokê) do pipeline. Não usa um "FFmpeg MCP Server" — chamado diretamente como processo, o que já dá controle total sem overhead de protocolo.
+- **`/voiceover-script`** (skill do projeto, [`.claude/skills/voiceover-script/SKILL.md`](../../.claude/skills/voiceover-script/SKILL.md)) — gera o roteiro de narração do anúncio de Mercado Livre a partir de `media/raw/<slug>/`. Codifica a voz da marca (brandbook + social playbook), a estrutura de 4 beats (hook → corpo → procedência → CTA), o alvo de 55–100 palavras e as regras de escrita para TTS/legenda karaokê. Invocar com `/voiceover-script <slug>`; salva o texto aprovado em `media/raw/<slug>/script.txt`. **Limitações**: produz texto, não voz (TTS ElevenLabs é etapa futura); exige confirmação humana do título oficial do jogo e de fatos não inferíveis do footage (plataforma, edição, escassez real); cobre só o formato de anúncio ML.
 
 ## Ainda não integrado (aguardando necessidade concreta)
 

@@ -14,7 +14,7 @@ Antes de qualquer tarefa de edição, seguir [`memory/session_init.md`](memory/s
 
 ## MVP (Objetivo 0)
 
-Foco atual: **automação de anúncios de Mercado Livre** — formato fixo capa (3s) → trailer (fundo desfocado + centro nítido) → narração + legenda karaokê + música baixa. Ver [`src/README.md`](src/README.md) para uso do pipeline e [`docs/brand/style-guide-video.md`](docs/brand/style-guide-video.md) para a especificação do formato. Voz é gravada pelo usuário e fornecida como arquivo de áudio (narração por IA é requisito futuro, não deste MVP).
+Foco atual: **automação de anúncios de Mercado Livre** — formato fixo capa (3s) → trailer (fundo desfocado + centro nítido) → narração + legenda karaokê + música baixa. Ver [`src/README.md`](src/README.md) para uso do pipeline e [`docs/brand/style-guide-video.md`](docs/brand/style-guide-video.md) para a especificação do formato. Voz é gravada pelo usuário e fornecida como arquivo de áudio (narração por IA é requisito futuro, não deste MVP). O **texto** da narração é gerado pela skill [`/voiceover-script`](.claude/skills/voiceover-script/SKILL.md), que codifica a voz da marca e as regras de escrita para voz/legenda.
 
 ## Regras do projeto
 
